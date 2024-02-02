@@ -3,6 +3,8 @@ import Register from "./pages/Register";
 import Showcase from "./pages/Showcase";
 import Info from "./pages/Info";
 import Movies from "./pages/Movies";
+import "./App.css";
+
 function App() {
   return (
     <Routes>

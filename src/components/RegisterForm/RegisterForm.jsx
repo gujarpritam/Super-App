@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import RegisterFormStyle from "./RegisterForm.module.css";
+import "../../App.css";
 
 export default function RegisterForm() {
   const [formValues, setFormValues] = useState({
@@ -89,15 +91,12 @@ export default function RegisterForm() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className={RegisterFormStyle.container}>
+      <h1 className="projectTitle">Super app</h1>
+      <h3 className="">Create your new account</h3>
+
       <input
+        className={RegisterFormStyle.inputBox}
         value={formValues.name}
         onChange={(e) => {
           setFormValues((prev) => {
@@ -107,10 +106,10 @@ export default function RegisterForm() {
         type="text"
         placeholder="Name"
       />
-      <p style={{ color: "#FF0000" }}>{errors.name}</p>
-      <br />
+      <p className={RegisterFormStyle.error}>{errors.name}</p>
 
       <input
+        className={RegisterFormStyle.inputBox}
         value={formValues.username}
         onChange={(e) => {
           setFormValues((prev) => {
@@ -120,10 +119,10 @@ export default function RegisterForm() {
         type="text"
         placeholder="UserName"
       />
-      <p style={{ color: "#FF0000" }}>{errors.username}</p>
-      <br />
+      <p className={RegisterFormStyle.error}>{errors.username}</p>
 
       <input
+        className={RegisterFormStyle.inputBox}
         value={formValues.email}
         onChange={(e) => {
           setFormValues((prev) => {
@@ -133,10 +132,10 @@ export default function RegisterForm() {
         type="text"
         placeholder="Email"
       />
-      <p style={{ color: "#FF0000" }}>{errors.email}</p>
-      <br />
+      <p className={RegisterFormStyle.error}>{errors.email}</p>
 
       <input
+        className={RegisterFormStyle.inputBox}
         value={formValues.mobile}
         onChange={(e) => {
           setFormValues((prev) => {
@@ -146,10 +145,9 @@ export default function RegisterForm() {
         type="text"
         placeholder="Mobile"
       />
-      <p style={{ color: "#FF0000" }}>{errors.mobile}</p>
-      <br />
+      <p className={RegisterFormStyle.error}>{errors.mobile}</p>
 
-      <label htmlFor="registerCheckbox">
+      <label className={RegisterFormStyle.checkbox} htmlFor="registerCheckbox">
         <input
           checked={formValues.registerCheckbox}
           onChange={(e) => {
@@ -162,16 +160,21 @@ export default function RegisterForm() {
           name="registerCheckbox"
           id="registerCheckbox"
         />
-        Share my registration data with Superapp
+        &nbsp;&nbsp;Share my registration data with Superapp
       </label>
-      <p style={{ color: "#FF0000" }}>{errors.registerCheckbox}</p>
+      <p className={RegisterFormStyle.error}>{errors.registerCheckbox}</p>
 
-      <button
-        onClick={handleSubmit}
-        style={{ border: "none", background: "#72DB73", padding: "6px" }}
-      >
+      <button onClick={handleSubmit} className={RegisterFormStyle.submit}>
         SIGN UP
       </button>
+      <p className={RegisterFormStyle.termsAndPolicy}>
+        By clicking on Sign up. you agree to Superapp
+        <span>Terms and Conditions of Use</span>
+      </p>
+      <p className={RegisterFormStyle.termsAndPolicy}>
+        To learn more about how Superapp collects, uses, shares and protects
+        your personal data please head Superapp <span>Privacy Policy</span>
+      </p>
     </div>
   );
 }

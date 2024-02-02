@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Roboto';
+  color: white;
+  }
+
+  .projectTitle{
+    font-family: "Single Day", cursive;
+  font-weight: 400;
+  font-style: normal;
+    color: #72DB73;
+    font-size: 2.5em;
+  }

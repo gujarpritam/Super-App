@@ -21,6 +21,9 @@ padding: 0px 7px;
   width: 100%;
   font-size: small;
 }
+.errorBorder{
+  border:2px solid red ;
+}
 
 .checkbox{
   width: 100%;

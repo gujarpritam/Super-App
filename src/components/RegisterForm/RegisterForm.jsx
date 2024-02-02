@@ -20,16 +20,22 @@ export default function RegisterForm() {
     registerCheckbox: null,
   });
 
+  // const [isError, setIsError]=useState(false);
+
   const navigate = useNavigate();
 
   const handleSubmit = () => {
     let isError = false;
     if (formValues.name.trim().length === 0) {
       isError = true;
+      document
+        .getElementById("name")
+        .setAttribute("style", "border: 1px solid red");
       setErrors((prev) => {
         return { ...prev, name: "Field is required" };
       });
     } else {
+      document.getElementById("name").setAttribute("style", "border: none");
       setErrors((prev) => {
         return { ...prev, name: null };
       });
@@ -37,10 +43,14 @@ export default function RegisterForm() {
 
     if (formValues.username.trim().length === 0) {
       isError = true;
+      document
+        .getElementById("userName")
+        .setAttribute("style", "border: 1px solid red");
       setErrors((prev) => {
         return { ...prev, username: "Field is required" };
       });
     } else {
+      document.getElementById("userName").setAttribute("style", "border: none");
       setErrors((prev) => {
         return { ...prev, username: null };
       });
@@ -48,10 +58,14 @@ export default function RegisterForm() {
 
     if (formValues.email.trim().length === 0) {
       isError = true;
+      document
+        .getElementById("email")
+        .setAttribute("style", "border: 1px solid red");
       setErrors((prev) => {
         return { ...prev, email: "Field is required" };
       });
     } else {
+      document.getElementById("email").setAttribute("style", "border: none");
       setErrors((prev) => {
         return { ...prev, email: null };
       });
@@ -59,10 +73,14 @@ export default function RegisterForm() {
 
     if (formValues.mobile.trim().length === 0) {
       isError = true;
+      document
+        .getElementById("mobile")
+        .setAttribute("style", "border: 1px solid red");
       setErrors((prev) => {
         return { ...prev, mobile: "Field is required" };
       });
     } else {
+      document.getElementById("mobile").setAttribute("style", "border: none");
       setErrors((prev) => {
         return { ...prev, mobile: null };
       });
@@ -83,7 +101,7 @@ export default function RegisterForm() {
     }
 
     if (isError === true) {
-      return;
+      return true;
     } else {
       window.localStorage.setItem("userInfo", JSON.stringify(formValues));
       navigate("/info");
@@ -96,6 +114,7 @@ export default function RegisterForm() {
       <h3 className="">Create your new account</h3>
 
       <input
+        id="name"
         className={RegisterFormStyle.inputBox}
         value={formValues.name}
         onChange={(e) => {
@@ -109,6 +128,7 @@ export default function RegisterForm() {
       <p className={RegisterFormStyle.error}>{errors.name}</p>
 
       <input
+        id="userName"
         className={RegisterFormStyle.inputBox}
         value={formValues.username}
         onChange={(e) => {
@@ -122,6 +142,7 @@ export default function RegisterForm() {
       <p className={RegisterFormStyle.error}>{errors.username}</p>
 
       <input
+        id="email"
         className={RegisterFormStyle.inputBox}
         value={formValues.email}
         onChange={(e) => {
@@ -135,6 +156,7 @@ export default function RegisterForm() {
       <p className={RegisterFormStyle.error}>{errors.email}</p>
 
       <input
+        id="mobile"
         className={RegisterFormStyle.inputBox}
         value={formValues.mobile}
         onChange={(e) => {

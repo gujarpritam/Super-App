@@ -1,0 +1,49 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box1{
+  height: 90%;
+  width: 30%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  
+}
+
+.box1 h1{
+  margin-top: 15%;
+}
+
+.box1 h3{
+  margin-top: 15%;
+  margin-bottom: 13%;
+  font-size: 40px;
+}
+
+.box2{
+  /* border: 1px solid red; */
+  height: 75%;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.nextButton{
+  background: #148A08;
+  position: absolute;
+  right: 0px;
+bottom: 0px;
+  border-radius: 15px;
+  width: 25%;
+  height: 5%;
+  border: none;
+  font-size: medium;
+}

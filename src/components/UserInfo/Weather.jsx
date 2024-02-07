@@ -25,8 +25,8 @@ function Weather() {
   return (
     <div
       style={{
-        width: "47%",
-        height: "27%",
+        width: "95%",
+        height: "38%",
         border: "1px solid blue",
         marginTop: "1%",
       }}
@@ -79,6 +79,7 @@ function Weather() {
                 display: "flex",
                 flexDirection: "column",
                 background: "none",
+                justifyContent: "space-between",
               }}
             >
               <p

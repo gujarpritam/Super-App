@@ -10,8 +10,8 @@ export default function UserInfo() {
       style={{
         background: "#5746EA",
         // border: "1px solid red",
-        height: "33%",
-        width: "47%",
+        height: "55%",
+        width: "95%",
         borderRadius: "10px",
         display: "flex",
       }}

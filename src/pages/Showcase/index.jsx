@@ -23,22 +23,35 @@ function Showcase() {
           flexDirection: "column",
           border: "1px solid blue",
           height: "100%",
+          width: "70%",
         }}
       >
         <div
-          style={{ display: "flex", border: "1px solid white", height: "100%" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            border: "1px solid white",
+            height: "65%",
+            width: "95%",
+          }}
         >
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              border: "1px solid pink",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+              border: "2px solid pink",
+              height: "95%",
+              width: "80%",
             }}
           >
             <UserInfo />
             <Weather style={{ border: "1px solid cyan" }} />
           </div>
-          <Notes />
+          <Notes
+            style={{ background: "#F1C75B", height: "98%", width: "45%" }}
+          />
         </div>
 
         <Timer />

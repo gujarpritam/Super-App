@@ -7,17 +7,17 @@ function Weather() {
 
   console.log(weather);
   useEffect(() => {
-    // fetch(
-    //   "https://api.tomorrow.io/v4/weather/forecast?location=20.5937,78.9629&apikey=XXEQpqkINQ5qBKkRsVLcp4QVfPPUgKPi"
-    // )
-    //   .then((data) => {
-    //     return data.json();
-    //   })
-    //   .then((res) => setWeather(res))
-    //   .catch((err) => {
-    //     setError(err);
-    //   })
-    //   .finally(() => setLoading(false));
+    fetch(
+      "https://api.tomorrow.io/v4/weather/forecast?location=20.5937,78.9629&apikey=XXEQpqkINQ5qBKkRsVLcp4QVfPPUgKPi"
+    )
+      .then((data) => {
+        return data.json();
+      })
+      .then((res) => setWeather(res))
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   // console.log(data);

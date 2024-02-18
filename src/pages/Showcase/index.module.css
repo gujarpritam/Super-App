@@ -1,0 +1,12 @@
+.browseButton{
+  background: #148A08;
+  position: absolute;
+  right: 50px;
+bottom: 15px;
+  border-radius: 15px;
+  width: 7%;
+  height: 5%;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}

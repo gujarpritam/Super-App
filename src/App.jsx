@@ -19,3 +19,5 @@ function App() {
 }
 
 export default App;
+
+// news api key - 3e16e9d3f43e467381619347d950903f
